@@ -1,0 +1,205 @@
+
+:root {
+    --point-color1: #8b4bf9;
+    --point-color2: #fc5e2f;
+    --size: 20px;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(2, 150px);
+    justify-content: center;
+    margin-top: 10%;
+    background: #d4d4d4;
+  }
+
+.loader-1, .loader-2, .loader-3, .loader-4, .loader-5, .loader-6{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}  
+
+
+/* 1 animation */
+.element {
+    box-sizing: border-box;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    border: 10px solid var(--point-color1);
+    border-top-color: var(--point-color2);
+    animation: moveit 1s infinite linear;
+}
+
+@keyframes moveit {
+    100% {
+        rotate: 360deg;
+    }
+}
+
+/* 2 animation */
+.dot {
+    width: var(--size);
+    height: var(--size);
+    border-radius: 100%;
+    background-color: var(--point-color1);
+    margin: 5px;
+
+    animation: moveit2 1s linear infinite alternate;
+}
+
+.central {
+    background-color: var(--point-color2);
+}
+
+.dot:nth-child(1) {
+    animation: moveit2 .6s ease-in-out infinite alternate;
+}
+.dot:nth-child(2) {
+    animation: moveit2 .6s ease-in-out infinite .2s alternate;
+}
+.dot:nth-child(3) {
+    animation: moveit2 .6s ease-in-out infinite .4s alternate;
+}
+
+@keyframes moveit2 {
+    0% {
+        transform: scale(0.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* 3 animation */
+.item {
+    width: 15px;
+    height: var(--size);
+    border-radius: 30px;
+    margin: 2px;
+}
+.one {
+    background-color: var(--point-color2);
+    animation: moveit3 .6s ease-out infinite alternate-reverse;
+}
+.two {
+    background-color: var(--point-color1);
+    animation: moveit3 .6s ease-out infinite .2s alternate-reverse;
+}
+.three {
+    background-color: var(--point-color2);
+    animation: moveit3 .6s ease-out infinite .3s alternate-reverse;
+}
+.four {
+    background-color: var(--point-color1);
+    animation: moveit3 .6s ease-out infinite .4s alternate-reverse;
+}
+.five {
+    background-color: var(--point-color2);
+    animation: moveit3 .6s ease-out infinite .5s alternate-reverse;
+}
+
+@keyframes moveit3 {
+    0% {
+        height: 10%;
+    }
+    100% {
+        height: 40%;
+    }
+}
+
+/* 4 anomation */
+
+.random {
+    width: 17px;
+    height: 17px;
+    margin-top: -0.5em;
+    border-radius: 100%;
+    box-shadow: rgba(252, 94, 47) 1.9em 0 0 0, rgba(139, 75, 249) 1.3em 1.3em 0 0, rgba(252, 94, 47) 0 1.9em 0 0, rgba(139, 75, 249) -1.3em 1.3em 0 0, rgba(252, 94, 47) -1.9em 0 0 0, rgba(139, 75, 249) -1.3em -1.3em 0 0, rgba(252, 94, 47) 0 -1.9em 0 0, rgba(139, 75, 249) 1.3em -1.3em 0 0;
+    animation: moveit4 1.8s 0s linear infinite;
+}
+
+@keyframes moveit4 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 5 animation */
+
+.wrap {
+    display: flex;
+    height: 23px;
+    width: 80px;
+    background-color: var(--point-color1);
+    border-radius: 20px;
+}
+
+.dot1 {
+    align-self: center;
+    margin-left: 1.5px;
+    height: var(--size);
+    width: var(--size);
+    background-color: var(--point-color2);
+    border-radius: 100%;
+
+    animation: moveit5 0.5s linear alternate infinite;
+}
+
+@keyframes moveit5 {
+    0% {
+        transform: translateX();
+    }
+    100% {
+        transform: translateX(57.5px);
+    }
+}
+
+/* 6 animation */
+.ball {
+    width: var(--size);
+    height: var(--size);
+    background-color: var(--point-color1);
+    border-radius: 100%;
+    position: absolute;
+
+    animation: moveit6 0.5s ease-in-out alternate-reverse infinite;
+}
+
+.second {
+    background-color: var(--point-color2);
+
+    animation: moveit7 0.5s ease-in-out alternate-reverse infinite;
+}
+
+@keyframes moveit6 {
+    0% {
+        transform: translateX(15px);
+        z-index: 1;
+    }
+    100% {
+        transform: translateX(-15px);
+    }
+}
+
+@keyframes moveit7 {
+    0% {
+        transform: translateX(-15px);
+    }
+    100% {
+        transform: translateX(15px);
+    }
+}
+
+
+
+
+
+
